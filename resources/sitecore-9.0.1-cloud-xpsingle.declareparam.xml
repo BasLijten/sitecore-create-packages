@@ -1,0 +1,11 @@
+<parameters>  
+  <parameter name="Application Insights Role" description="Sitecore Application Insights Role" tags="Hidden,NoStore">
+    <parameterEntry kind="XmlFile" scope="App_Config\\Include\\zzz\\Sitecore\.Cloud\.ApplicationInsights\.config$" match="//settings/setting[@name='ApplicationInsights.Role']/@value" />
+  </parameter>
+   <parameter name="Allow Invalid Client Certificates" description="Allow Invalid Client Certificates" defaultValue="true" tags="" >
+    <parameterEntry kind="XmlFile" scope="Web\.config$" match="//configuration/appSettings/add[@key='AllowInvalidClientCertificates']/@value" />
+  </parameter>
+  <parameter name="License Xml" tags="Hidden,NoStore">
+    <parameterEntry type="TextFile" scope= "App_Data\\license.xml" match="LicenseContent" />
+  </parameter>
+</parameters>
